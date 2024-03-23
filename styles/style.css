@@ -2,13 +2,20 @@ body {
   background-color: #1e1e1e;
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-weight: 400;
+  font-size: 16px;
   color: #f5f5f5;
   box-sizing: border-box;
+}
+
+main {
+  border-bottom: 1px solid #fee42a;
 }
 
 .content-section {
   box-sizing: border-box;
   padding: 40px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .content-section_theme_bright {
@@ -16,16 +23,197 @@ body {
   color: #131313;
 }
 
+/* хедер */
 .header {
   padding: 24px 20px;
+  display: flex;
+  justify-content: space-between;
 }
+
+.header__menu-list {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+@media screen and (min-width: 576px) {
+  .header__menu-list {
+    display: flex;
+    gap: 0 2em;
+  }
+}
+
+.header__menu-item a {
+  color: #f5f5f5;
+  margin-bottom: 12px;
+}
+
+.header__menu-item:last-child a {
+  margin-bottom: 0;
+}
+
+.header__menu-item_active a {
+  text-decoration: none;
+}
+
+.header__menu-item {
+  margin-bottom: 12px;
+}
+
+.header__menu-item:last-child {
+  margin-bottom: 0;
+}
+
 .cover {
+  background-image: url(/images/cover.svg);
+  background-repeat: no-repeat;
+  background-position: 100% 55%;
+  background-size: 95% auto;
 }
-.intro {
+
+.cover__title {
+  font-family: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+  font-size: 6em;
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
-.reasons {
+
+.accent-span {
+  display: block;
 }
-.how-to {
+.text-center {
+  text-align: center;
 }
+.text-right {
+  text-align: right;
+}
+
+.intro__heading {
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 1em;
+}
+
+.intro__title {
+  font-size: 1em;
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.intro__date {
+  white-space: nowrap;
+}
+
+.intro__main-text p:last-child {
+  margin-bottom: 0;
+}
+
+/* резоны */
+.content-section__subtitle {
+  font-size: 2em;
+  font-family: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  margin-block-start: 0;
+}
+
+.content-section__introduction {
+  font-size: 1.25em;
+  margin-block-end: 2rem;
+}
+
+.content-section__list {
+  padding-inline-start: 1em;
+}
+
+.content-section__list-item {
+  margin-bottom: 1em;
+}
+.content-section__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.content-section__list-accent {
+  font-weight: 700;
+}
+
+/* как */
+.cards-list {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.cards-list li {
+  margin-bottom: 2rem;
+}
+
+.cards-list li:last-child {
+  margin-bottom: 0;
+}
+
+.cards-list li:nth-child(even) .card {
+  background-color: #fee42a;
+  color: #131313;
+}
+
+.card {
+  background-color: #343434;
+  border-radius: 30px;
+  padding: 20px;
+}
+.card__author {
+}
+.card__author-photo {
+  width: 100px;
+}
+.card__author-name {
+  font-weight: 700;
+  margin: 0.5rem 0;
+}
+.card__content {
+}
+.card__title {
+  font-family: "EB Garamond", Georgia, "Times New Roman", Times, serif;
+  font-size: 1.375em;
+  font-weight: 500;
+  margin: 0 0 0.5rem;
+}
+.card__text {
+  margin: 0 0 0.5rem;
+}
+
+.card__text:last-child {
+  margin: 0;
+}
+
 .footer {
+  padding: 20px;
+  line-height: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__copy {
+}
+
+.footer__links {
+  display: flex;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  list-style: none;
+  gap: 0 1rem;
+}
+
+.footer__link {
+}
+
+.footer__link a {
+  color: #f5f5f5;
+  text-decoration: none;
 }
